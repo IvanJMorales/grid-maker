@@ -1,2 +1,2 @@
 # gridmaker
-WebDev - Assingment 3 Gridmaker
+WebDev - Assignment 3 Gridmaker
