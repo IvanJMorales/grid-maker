@@ -1,2 +1,2 @@
 # Grid-Maker
-WebDev - Assignment 3 Gridmaker
+WebDev - Assignment 3 Grid Maker
