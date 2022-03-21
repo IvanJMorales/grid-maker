@@ -63,11 +63,17 @@ function addC() {
 // Remove a row
 function removeR() {
     document.getElementById("grid").deleteRow(-1);
+    numRows--;
 }
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    let rows = document.querySelectorAll('tr');
+
+    rows.forEach(row => {
+        row.deleteCell(-1);
+    })
+    numCols--;
 }
 
 // Set global variable for selected color
