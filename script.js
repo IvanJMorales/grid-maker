@@ -7,6 +7,7 @@ let colorSelected;
 // Add a row
 function addR() {
     let table = document.getElementById("grid");
+<<<<<<< HEAD
     let row = table.insertRow(-1);
     let cell = row.insertCell(-1);
 
@@ -21,6 +22,45 @@ function addR() {
     else {
         numRows++;
     }
+=======
+
+    if (numRows == 0) {
+        
+        let row = table.insertRow(-1);
+        let cell = row.insertCell(-1);
+    
+        row.className = "row";
+        row.id = "row";
+        cell.className = "cell";
+
+        numRows++;
+        numCols++;
+    }
+    else if (numCols >= 1) {
+        let row = table.insertRow(-1);
+
+        for (let i = 0; i < numCols; i++) {
+            let cell = row.insertCell(-1);
+            row.className = "row";
+            row.id = "row";
+            cell.className = "cell";
+        }
+        numRows++;
+    }
+    else {
+        let row = table.insertRow(-1);
+        let cell = row.insertCell(-1);
+    
+        row.className = "row";
+        row.id = "row";
+        cell.className = "cell";
+
+        numRows++;
+    }
+
+    console.log(numRows)
+    console.log(numCols)
+>>>>>>> add-row
 }
 
 // Add a column
@@ -30,8 +70,16 @@ function addC() {
     rows.forEach(row => {
         let cell = row.insertCell(-1);
         cell.className = "cell";
+<<<<<<< HEAD
         numCols++;
     })
+=======
+    })
+    numCols++;
+
+    console.log(numRows)
+    console.log(numCols)
+>>>>>>> add-row
 }
 
 // Remove a row
