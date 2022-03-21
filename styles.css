@@ -9,8 +9,8 @@
 }
 
 .cell {
-    background-color: black;
+    border: 1px;
+    border-style: solid;
     height: 50px;
     width: 50px;
-
 }
