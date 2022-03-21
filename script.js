@@ -1,11 +1,16 @@
 // Declare global variables
-let numRows = 0;
-let numCols = 0;
+let numRows = 1;
+let numCols = 1;
 let colorSelected;
+
 
 // Add a row
 function addR() {
-    
+    let table = document.getElementById("grid");
+    let row = document.getElementById("row").cloneNode(true);
+
+    table.appendChild(row);
+    numRows++;
 }
 
 // Add a column
@@ -43,3 +48,4 @@ function fillAll(){
 function clearAll(){
     alert("Clicked Clear All"); // Replace this line with your code.
 }
+
