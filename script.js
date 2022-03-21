@@ -1,21 +1,37 @@
 // Declare global variables
-let numRows = 1;
-let numCols = 1;
+let numRows = 0;
+let numCols = 0;
 let colorSelected;
 
 
 // Add a row
 function addR() {
     let table = document.getElementById("grid");
-    let row = document.getElementById("row").cloneNode(true);
+    let row = table.insertRow(-1);
+    let cell = row.insertCell(-1);
 
-    table.appendChild(row);
-    numRows++;
+    row.className = "row";
+    row.id = "row";
+    cell.className = "cell";
+
+    if (numRows == 0) {
+        numRows++;
+        numCols++;
+    }
+    else {
+        numRows++;
+    }
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    let rows = document.querySelectorAll('tr');
+
+    rows.forEach(row => {
+        let cell = row.insertCell(-1);
+        cell.className = "cell";
+        numCols++;
+    })
 }
 
 // Remove a row
