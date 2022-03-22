@@ -104,6 +104,10 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let cell = document.getElementById("grid").getElementsByTagName('td');
+
+    for (let i = 0; i < cell.length; i++) {
+        cell[i].style.backgroundColor = "white";
+    }
 }
 
