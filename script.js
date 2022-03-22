@@ -84,7 +84,13 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored");
+    let cell = document.getElementById("grid").getElementsByTagName('td');
+
+    for (let i = 0; i < cell.length; i++) {
+        if (cell[i].style.backgroundColor = "white") {
+            cell[i].style.backgroundColor = colorSelected;
+        }
+    }
 }
 
 // Fill all cells
