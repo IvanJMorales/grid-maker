@@ -84,7 +84,7 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    alert("Clicked Fill All Uncolored");
 }
 
 // Fill all cells
