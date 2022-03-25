@@ -28,6 +28,7 @@ function addR() {
             row.className = "row";
             row.id = "row";
             cell.className = "cell";
+            cell.style.backgroundColor = "white"
         }
         numRows++;
     }
@@ -38,6 +39,7 @@ function addR() {
         row.className = "row";
         row.id = "row";
         cell.className = "cell";
+        cell.style.backgroundColor = "white"
 
         numRows++;
     }
@@ -53,6 +55,7 @@ function addC() {
     rows.forEach(row => {
         let cell = row.insertCell(-1);
         cell.className = "cell";
+        cell.style.backgroundColor = "white"
     })
     numCols++;
 
@@ -87,7 +90,7 @@ function fillU(){
     let cell = document.getElementById("grid").getElementsByTagName('td');
 
     for (let i = 0; i < cell.length; i++) {
-        if (cell[i].style.backgroundColor = "white") {
+        if (cell[i].style.backgroundColor == "white") {
             cell[i].style.backgroundColor = colorSelected;
         }
     }
