@@ -16,7 +16,9 @@ function addR() {
         row.className = "row";
         row.id = "row";
         cell.className = "cell";
-        cell.style.backgroundColor = "white"
+        cell.style.backgroundColor = "white";
+        cell.addEventListener("click", fillOnClick);
+
 
         numRows++;
         numCols++;
@@ -30,6 +32,7 @@ function addR() {
             row.id = "row";
             cell.className = "cell";
             cell.style.backgroundColor = "white"
+            cell.addEventListener("click", fillOnClick);
         }
         numRows++;
     }
@@ -40,7 +43,8 @@ function addR() {
         row.className = "row";
         row.id = "row";
         cell.className = "cell";
-        cell.style.backgroundColor = "white"
+        cell.style.backgroundColor = "white";
+        cell.addEventListener("click", fillOnClick);
 
         numRows++;
     }
@@ -51,17 +55,23 @@ function addR() {
 
 // Add a column
 function addC() {
-    let rows = document.querySelectorAll('tr');
+    if (numRows == 0) {
+        addR();
+    }
+    else {
+        let rows = document.querySelectorAll('tr');
 
-    rows.forEach(row => {
-        let cell = row.insertCell(-1);
-        cell.className = "cell";
-        cell.style.backgroundColor = "white"
-    })
-    numCols++;
+        rows.forEach(row => {
+            let cell = row.insertCell(-1);
+            cell.className = "cell";
+            cell.style.backgroundColor = "white";
+            cell.addEventListener("click", fillOnClick);
+        })
+        numCols++;
 
-    console.log(numRows)
-    console.log(numCols)
+        console.log(numRows)
+        console.log(numCols)
+    }
 }
 
 // Remove a row
@@ -116,4 +126,9 @@ function clearAll(){
         }
     }
 }
+
+function fillOnClick() {
+    this.style.backgroundColor = colorSelected;
+}
+
 
