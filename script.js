@@ -16,6 +16,7 @@ function addR() {
         row.className = "row";
         row.id = "row";
         cell.className = "cell";
+        cell.style.backgroundColor = "white"
 
         numRows++;
         numCols++;
@@ -107,6 +108,12 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let cell = document.getElementById("grid").getElementsByTagName('td');
+
+    for (let i = 0; i < cell.length; i++) {
+        if (cell[i].style.backgroundColor !== "white") {
+            cell[i].style.backgroundColor = "white";
+        }
+    }
 }
 
